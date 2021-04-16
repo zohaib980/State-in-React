@@ -1,8 +1,33 @@
+
+Person.css
+.Person{
+    width: 60%;
+    margin: 16px auto ;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 16px;
+    text-align: center;
+}
+.btn{
+    background-color: greenyellow;
+    font: 'inherit';
+    border: 1px solid white;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 /* import React from 'react';
+   import './Person.css';
 
 const person = ( props ) => {
     return (
-        <div>
+        <div className='person'>
             <p onClick={props.click}>I'm {props.name} and I am {props.age} years old!</p>
             <p>{props.children}</p>
             <input type="text" onChange={props.changed} value={props.name} />
@@ -17,6 +42,7 @@ export default person;
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
+import './Person.css';
 
 class App extends Component {
   state = {
@@ -55,7 +81,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p>This is really working!</p>
-        <button onClick={() => this.switchNameHandler('Raci')}>Switch Name</button>
+        <button className='btn' onClick={() => this.switchNameHandler('Raci')}>Switch Name</button>
         <Person 
           name={this.state.persons[0].name} 
           age={this.state.persons[0].age} />
